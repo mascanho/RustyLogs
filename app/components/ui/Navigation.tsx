@@ -5,8 +5,8 @@ import Drawer from "./Drawer";
 
 function Navigation() {
   return (
-    <div className="p-2 dark:text-white text-black flex justify-between border-b">
-      <section className="flex items-center">
+    <div className="p-2 dark:text-white text-black flex justify-between fixed top-0 border-b bg-white z-50 w-full">
+      <section className="flex items-center bg-white">
         <Drawer />
         <span className="ml-2">RustyLogs</span>
       </section>
