@@ -151,12 +151,11 @@ export function TimeSeriesChart() {
   });
 
   return (
-    <Card className="rounded-none">
-      <CardHeader className="flex items-center gap-2 space-y-0 border-b py-0 sm:flex-row rounded-none">
-        <div className="grid flex-1 text-center sm:text-left"></div>
+    <Card className="rounded-none shadow-none py-2 border-0 px-2">
+      <CardHeader className="flex items-center gap-2 space-y-0 py-0 sm:flex-row rounded-none">
         <Select value={timeRange} onValueChange={setTimeRange}>
           <SelectTrigger
-            className="w-[160px] rounded-lg sm:ml-auto"
+            className="w-[160px] -mr-6 -mb-3.5 rounded-lg sm:ml-auto"
             aria-label="Select a value"
           >
             <SelectValue placeholder="Last 3 months" />
@@ -174,7 +173,7 @@ export function TimeSeriesChart() {
           </SelectContent>
         </Select>
       </CardHeader>
-      <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
+      <CardContent className=" sm:px-0 px-0 border rounded-md">
         <ChartContainer
           config={chartConfig}
           className="aspect-auto h-[250px] w-full"
