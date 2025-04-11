@@ -8,7 +8,7 @@ function Container() {
   return (
     <div className=" bg-white dark:bg-slate-950">
       <Navigation />
-      <main className="h-[calc(100vh - 9rem)] overflow-hidden">
+      <main className="">
         <TimeSeriesChart />
         <section className="flex justify-between gap-2 px-2">
           <DonutChartA />
@@ -16,7 +16,9 @@ function Container() {
           <DonutChartA />
         </section>
 
-        <LogTable data={sampleLogData} />
+        <section className="h-96 overflow-auto">
+          <LogTable data={sampleLogData} />
+        </section>
       </main>
     </div>
   );
